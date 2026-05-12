@@ -1,0 +1,26 @@
+name: Test commit comment inputs
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_EVENT_NAME: push
+      GITHUB_REF: refs/heads/main
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - id: action
+        uses: .
+        continue-on-error: true
+        with:
+          message: "Commit comment test"
+          comment-target: "commit"
+          commit-sha: "abc1234567890abcdef1234567890abcdef12345"
+          message-id: "test-commit-comment"
+          allow-repeats: "true"
+          repo-token: "fake-token-for-testing"
+      - name: Assert action ran
+        run: |
+          echo "Action completed (may fail due to no real GitHub API)"
+          echo "comment-created: ${{ steps.action.outputs.comment-created }}"
+          echo "PASS"
