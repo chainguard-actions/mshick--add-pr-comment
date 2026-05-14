@@ -8,6 +8,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
+| v3.10.0 | [`v3.10.0`](https://github.com/chainguard-actions/add-pr-comment/tree/v3.10.0) | — |
 | v3.10.1 | [`v3.10.1`](https://github.com/chainguard-actions/add-pr-comment/tree/v3.10.1) | — |
 | v3.11.0 | [`v3.11.0`](https://github.com/chainguard-actions/add-pr-comment/tree/v3.11.0) | — |
 | v3.9.1 | [`v3.9.1`](https://github.com/chainguard-actions/add-pr-comment/tree/v3.9.1) | — |
